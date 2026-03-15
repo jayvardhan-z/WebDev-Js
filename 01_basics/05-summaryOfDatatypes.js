@@ -26,15 +26,15 @@ const bigNumber = 3456543576654356754n
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
-    age: 22,
+    name: "Jayvardhan",
+    age: 20,
 }
 
 const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof myFunction);
+console.log(myObj.name);
 
 // Return type of variables in JavaScript
 // =======================
