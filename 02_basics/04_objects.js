@@ -60,7 +60,7 @@ users[1].email
 console.log(tinderUser);
 
 console.log(Object.keys(tinderUser));  // gives the array of keys of tinderUser Object
-console.log(Object.values(tinderUser)); // gives the array of keys of tinderUser Object
+console.log(Object.values(tinderUser)); // gives the array of values of tinderUser Object
 console.log(Object.entries(tinderUser)); // gives the array of key, value pair of tinderUser Object
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); // return boolean on whether there exist the property named "isLoggedIn"
