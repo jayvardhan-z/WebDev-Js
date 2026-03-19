@@ -57,10 +57,41 @@ const users = [
 
 users[1].email
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));  // gives the array of keys of tinderUser Object
-console.log(Object.values(tinderUser)); // gives the array of values of tinderUser Object
-console.log(Object.entries(tinderUser)); // gives the array of key, value pair of tinderUser Object
+// console.log(Object.keys(tinderUser));  // gives the array of keys of tinderUser Object
+// console.log(Object.values(tinderUser)); // gives the array of values of tinderUser Object
+// console.log(Object.entries(tinderUser)); // gives the array of key, value pair of tinderUser Object
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // return boolean on whether there exist the property named "isLoggedIn"
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // return boolean on whether there exist the property named "isLoggedIn"
+
+
+// --------------------------------------------Destructuring Objects --------------------------------------------------
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+
+// API are obtained in Json object or array of objects format 
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
