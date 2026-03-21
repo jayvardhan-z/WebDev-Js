@@ -1,3 +1,5 @@
+// to iterate over Objects use for-in loop
+
 const myObject = {
     js: "Javascript",
     cpp: "C++",
@@ -5,14 +7,14 @@ const myObject = {
     rb: "Ruby"
 }
 
-for (const key in myObject) {
-    console.log(key);  // to access key of a object
-    console.log(myObject[key]); // to access values of a object
-}
+// for (const key in myObject) {
+//     // console.log(key);  // to access key of a object
+//     // console.log(myObject[key]); // to access values of a object
+// }
 
 const programming = ["js", "rb", "py", "java", "cpp"]
 
-for (const key in programming) {
+for (const key in programming) {            // for in loops are mostly not used for arrays
     //console.log(programming[key]);
 }
 
@@ -22,6 +24,6 @@ for (const key in programming) {
 // map.set('Fr', "France")
 // map.set('IN', "India")
 
-// for (const key in map) {
+// for (const [key, value] in map) {  // doesnt print anything so for in loop is "not used" to iterate over map 
 //     console.log(key);
 // }
