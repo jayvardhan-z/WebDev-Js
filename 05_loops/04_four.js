@@ -16,7 +16,7 @@ const programming = ["js", "rb", "py", "java", "cpp"]
 
 for (const key in programming) {            // for in loops are mostly not used for arrays
     //console.log(programming[key]);
-}
+} 
 
 // const map = new Map()
 // map.set('IN', "India")
