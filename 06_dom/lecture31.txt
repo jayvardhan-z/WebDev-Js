@@ -1,0 +1,40 @@
+Lecture no. 31
+Here are the important notes regarding the DOM Introduction video:
+    
+Example HTML:
+    <html>
+    <body>
+        <h1>Hello</h1>
+        <p>Paragraph</p>
+    </body>
+    </html>
+    Corresponding DOM Tree:
+
+Window
+ └ Document
+    └── html
+        └── body
+            ├── h1
+            │    └── "Hello"
+            └── p
+                └── "Paragraph"
+
+1. What is the DOM? (7:17)
+DOM stands for Document Object Model.
+It is a structural representation of an HTML document, organized like a tree where every element is a node.
+This structure allows JavaScript to access, manipulate, and change the content and style of web pages.
+
+2. Structure of a DOM Tree (7:17-12:35)
+Window Object: The top-level container in the browser.
+Document Object: Represents the web page itself (accessible via window.document or simply document).
+Nodes: Elements like ,, , , and even text within tags are considered nodes in this model.
+Attributes: Features like class, id, and title are also nodes or properties within the tree.
+
+3. Console Tools for Exploration (4:42)
+console.log(): Used to display a standard representation of an object.
+console.dir(): Used to display a detailed, interactive JSON-like representation of a JavaScript object (6:23), allowing you to see all internal properties and methods.
+
+4. Selecting Elements (16:04)
+document.getElementById(): A method to select specific HTML elements using their unique id attribute.
+5. DOM Manipulation (16:40)
+.innerHTML: A property used to read or change the HTML content inside an element dynamically. 
