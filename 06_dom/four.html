@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style= "background-color: #212121; color: #fff;">
+    <ul class = "language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+     
+    function addlang(langName){
+        const list = document.createElement('li');
+        list.innerText = langName;
+        document.querySelector(".language").appendChild(list);
+    }
+
+    addlang("Python")
+    addlang("Typescript")
+
+    // Optimized Way to add a list item in ul
+    function addLangOptimalWay(langName){
+        const list = document.createElement('li');
+        const addText = document.createTextNode(langName);
+        list.appendChild(addText)
+     
+        document.querySelector(".language").appendChild(list);
+    }
+    addLangOptimalWay("C++")
+
+
+    // Edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "GO" // way no. 1 
+
+    let newLi = document.createElement('li') // way no. 2
+    newLi.textContent = "GO"
+    secondLang.replaceWith(newLi)
+
+    // Edit
+
+    // way no. 3
+    const firstLang = document.querySelector('li')
+    // console.log(firstLang);
+    firstLang.outerHTML = "<li>Typescript</li>"
+
+
+    // Remove
+    const lastLang = document.querySelector('ul').lastElementChild
+    console.log(lastLang);
+    lastLang.remove()
+
+</script>
+
+</html>
