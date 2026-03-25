@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // attachEvent() was used in earlier time at the time of internet explorer not used today
+    // jQuery
+    
+    // --------------------------------- go through these events also -------------------------------
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // type, timestamp, defaultPrevented
+    // altkey, ctrlkey, shiftkey, keyCode
+    
+    // all the events in JS are ran sequentially
+    // approach 1 for applying a click event only  there is no propagation ability in onclick 
+        // document.getElementById('owl').onclick = function(){
+        //     alert("owl clicked")
+        // }
+    
+
+    // approach 2 for applying many event ------------important-------------   there is propagation ability 
+        // document.getElementById('owl').addEventListener('click', function(){
+        //     alert("owl clicked")
+        // })
+    
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log("Clicked inside the ul")
+        // }, false)  // if true is selected then EventListener will be in capturing mode
+                  // if false is selected(default) then EventListener will be in bubbling mode
+
+        // document.getElementById('owl').addEventListener('click', function(e){
+        //     console.log("owl clicked")
+        //     e.stopPropagation() // Event stops at the owl doesn't bubble up incase of false
+        // }, false)  // false, true is called bubbling event
+        
+        // output will be first image click then owl click in case of true
+        // output will be first owl click then image click in case of false(default)
+
+
+        // document.getElementById('google').addEventListener('click', function(e){
+        //     e.preventDefault();  // Stops default browser behavior
+        //     console.log("google clicked");
+        // })
+
+
+        // task -------> when an image is clicked the image disappears
+        document.querySelector('ul').addEventListener('click', function(e){
+            // console.log(e.target); // give img tag
+            // console.log(e.target.parentNode);  // gives li tag
+            console.log(e.target.tagName); // give tag name only, 'IMG' in this case
+            
+            if(e.target.tagName === 'IMG'){         
+                let removeEl = e.target.parentNode
+                removeEl.remove()
+            } // this will remove the image only if it is clicked not when a "list is clicked"
+            
+        })
+
+</script>
+</html>
