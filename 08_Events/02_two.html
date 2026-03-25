@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    
+    // way no 1
+        // setTimeout( ()=>{
+        //     console.log("Hi");
+        // }, 2000 )
+
+    // way no 2
+        const sayHi = ()=>{
+                console.log("Hi");
+            }
+        
+        setTimeout( sayHi, 2000 )  // prints the Hi msg after 2 sec
+    
+    const changeHeading = ()=>{
+        document.querySelector('h1').innerHTML = "Hi"
+    }
+    
+
+    const changeMe = setTimeout(changeHeading, 5000) // changes the Heading after 5 sec
+
+    document.querySelector("#stop").addEventListener( 'click',()=>{
+        clearTimeout(changeMe)
+        console.log("Stopped")
+    } )
+
+</script>
+
+
+</html>
